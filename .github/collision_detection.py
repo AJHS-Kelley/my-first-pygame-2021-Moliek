@@ -1,4 +1,4 @@
-# PyGame Collision Dtection Pratice, Ryan Kelley, January 04, 2022, 1:52, v0.3
+# PyGame Collision Dtection Pratice, Ryan Kelley, January 04, 2022, 2:02, v0.4
 
 import pygame, sys, random
 from pygame.locals import *
@@ -18,3 +18,12 @@ BLACK = (0, 0, 0)
 GREEN =(0, 255, 0)
 WHITE = (255, 255, 255)
 
+# Setup the player and food data structres.
+foodCountyer = 0
+NEWFOOD = 40
+FOODSIZE = 20
+player = pygame.Rect(300,100, 50, 50)
+foods = []
+
+for i in range(20):
+    foods.append(pygame.Rect(random.randict(0, WINDOWWIDTH - FOODSIZE), random.randict(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
